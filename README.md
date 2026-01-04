@@ -1,4 +1,4 @@
-# Ultimate Frisbee Team Scheduling APp
+# Ultimate Frisbee Team Scheduling APP
 
 This project aims to provide a front-end application of scheduling players during a ultimate frisbee game, so each player on the team can have equal participation in the games.
 
