@@ -1,6 +1,6 @@
-# Welcome to your Expo app 👋
+# Ultimate Frisbee Team Scheduling APp
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This project aims to provide a front-end application of scheduling players during a ultimate frisbee game, so each player on the team can have equal participation in the games.
 
 ## Get started
 
