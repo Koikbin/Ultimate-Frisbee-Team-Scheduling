@@ -1,50 +1,66 @@
-# Ultimate Frisbee Team Scheduling APP
+# Ultimate Frisbee Team Scheduling App
 
-This project aims to provide a front-end application of scheduling players during a ultimate frisbee game, so each player on the team can have equal participation in the games.
+A mobile app (built with Expo / React Native) for scheduling players during an ultimate frisbee game, so that every player on the team gets equal playing time.
 
-## Get started
+> **Status: early development.** The project is currently the Expo starter template. The scheduling features below are planned and not yet implemented.
 
-1. Install dependencies
+## Planned features
 
-   ```bash
-   npm install
-   ```
+- Manage the team roster (add / remove players)
+- Select the 7 players on the field for each point
+- Track how many points each player has played
+- Suggest the next line-up so playing time stays balanced
+- (Optional) Respect gender-ratio rules for mixed divisions
 
-2. Start the app
+## Tech stack
 
-   ```bash
-    npx expo start
-   ```
+| | |
+|---|---|
+| Framework | [Expo](https://expo.dev) SDK 52, [React Native](https://reactnative.dev) 0.76 |
+| Language | TypeScript |
+| Navigation | [Expo Router](https://docs.expo.dev/router/introduction) (file-based routing) |
+| Testing | Jest (`jest-expo`) |
+| Platforms | iOS, Android, Web |
 
-In the output, you'll find options to open the app in a
+## Getting started
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+Prerequisites: [Node.js](https://nodejs.org) (LTS) and npm. To run on a phone, install [Expo Go](https://expo.dev/go).
 
 ```bash
-npm run reset-project
+npm install
+npx expo start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Then press `i` (iOS simulator), `a` (Android emulator), `w` (web), or scan the QR code with Expo Go.
 
-## Learn more
+### Available scripts
 
-To learn more about developing your project with Expo, look at the following resources:
+| Command | Description |
+|---|---|
+| `npm start` | Start the Expo dev server |
+| `npm run android` | Start and open on Android |
+| `npm run ios` | Start and open on iOS |
+| `npm run web` | Start and open in the browser |
+| `npm test` | Run Jest tests in watch mode |
+| `npm run lint` | Run the Expo linter |
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Project structure
 
-## Join the community
+```
+app/                  Screens and routes (Expo Router)
+  (tabs)/             Bottom-tab screens
+  _layout.tsx         Root layout (fonts, theme)
+components/           Reusable UI components (+ tests in __tests__/)
+constants/            Colors and other constants
+hooks/                Custom React hooks (color scheme, theme)
+assets/               Fonts and images
+scripts/              Helper scripts
+ultimate-frisbee/     Second copy of the app on Expo SDK 53 (to be merged or removed)
+```
 
-Join our community of developers creating universal apps.
+## Roadmap
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- [ ] Replace the starter screens with a roster screen and a game screen
+- [ ] Implement the playing-time balancing logic
+- [ ] Save rosters and game history locally on the device
+- [ ] Merge the two app folders into one
